@@ -3,6 +3,10 @@
 History
 -------
 
+0.0.1 (2017-02-27)
+* Fork from https://github.com/dyve/django-bootstrap3
+* Name change to django-bootstrap3
+* Changed from bootstrap3 to bootstrap4.0.0-alpha.6
 
 8.2.1 (2017-02-23)
 ++++++++++++++++++

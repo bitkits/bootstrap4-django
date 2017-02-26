@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block bootstrap4_title %}django-bootstrap4 template title{% endblock %}</title>
+    {% bootstrap_css %}
+</head>
+
+<body>
+{% block bootstrap4_content %}django-bootstrap4 template content{% endblock %}
+{% bootstrap_javascript jquery=True %}
+{% block bootstrap4_extra_script %}{% endblock %}
+</body>
+
+</html>

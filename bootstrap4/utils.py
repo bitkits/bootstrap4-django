@@ -114,17 +114,19 @@ def remove_css_class(css_classes, css_class):
     return ' '.join(classes_list)
 
 
-def render_link_tag(url, rel='stylesheet', media=None):
+def render_link_tag(url, rel='stylesheet', media=None, attrs={}):
     """
     Build a link tag
     """
-    attrs = {
+    
+    link_attrs = {
         'href': url,
         'rel': rel,
     }
+    link_attrs.update(attrs)
     if media:
         attrs['media'] = media
-    return render_tag('link', attrs=attrs, close=False)
+    return render_tag('link', attrs=link_attrs, close=False)
 
 
 def render_tag(tag, attrs=None, content=None, close=True):

@@ -4,14 +4,14 @@
 import os
 import sys
 
-import bootstrap3
+import bootstrap4
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-version = bootstrap3.__version__
+version = bootstrap4.__version__
 
 if sys.argv[-1] == 'publish':
     os.system('cd docs && make html')
@@ -34,22 +34,22 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 setup(
-    name='django-bootstrap3',
+    name='django-bootstrap4',
     version=version,
-    description="""Bootstrap support for Django projects""",
+    description="""Bootstrap 4 support for Django projects""",
     long_description=readme + '\n\n' + history,
-    author='Dylan Verheul',
-    author_email='dylan@dyve.net',
-    url='https://github.com/dyve/django-bootstrap3',
+    author='Kent Medin',
+    author_email='bitkit@gmail.com',
+    url='https://github.com/bitkits/django-bootstrap4',
     packages=[
-        'bootstrap3',
+        'bootstrap4',
     ],
     include_package_data=True,
     install_requires=[
     ],
     license="Apache License 2.0",
     zip_safe=False,
-    keywords='django-bootstrap3',
+    keywords='django-bootstrap4',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -60,6 +60,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',

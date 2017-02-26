@@ -1,6 +1,6 @@
 import django.conf.global_settings as DEFAULT_SETTINGS
 
-SECRET_KEY = 'bootstrap3isawesome'
+SECRET_KEY = 'bootstrap4isawesome'
 
 DATABASES = {
     'default': {
@@ -19,7 +19,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # We test this one
-    'bootstrap3',
+    'bootstrap4',
 )
 
 MIDDLEWARE_CLASSES = DEFAULT_SETTINGS.MIDDLEWARE_CLASSES
@@ -42,10 +42,9 @@ TEMPLATES = [{
 
 ROOT_URLCONF = None
 
-BOOTSTRAP3 = {
+BOOTSTRAP4 = {
     'theme_url': '//example.com/theme.css',
-    'javascript_in_head': True,
-    'required_css_class': 'bootstrap3-req',
-    'error_css_class': 'bootstrap3-err',
-    'success_css_class': 'bootstrap3-bound',
+    'required_css_class': 'bootstrap4-req',
+    'error_css_class': 'bootstrap4-err',
+    'success_css_class': 'bootstrap4-bound',
 }

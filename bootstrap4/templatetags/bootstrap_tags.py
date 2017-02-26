@@ -11,7 +11,7 @@ from django.template import Context
 from django.utils.safestring import mark_safe
 
 from ..bootstrap import (
-    css_url, javascript_url, jquery_url, theme_url, get_bootstrap_setting
+    css_url, javascript_url, jquery_url, theme_url, get_bootstrap_setting, javascript_url_integrity, css_url_integrity, jquery_integrity
 )
 from ..components import render_icon, render_alert
 from ..forms import (
@@ -78,7 +78,7 @@ def bootstrap_jquery_url():
 
     Return the full url to jQuery file to use
 
-    Default value: ``//code.jquery.com/jquery.min.js``
+    Default value: ``//code.jquery.com/jquery-3.1.1.slim.min.js``
 
     This value is configurable, see Settings section
 
@@ -189,7 +189,7 @@ def bootstrap_css():
 
         {% bootstrap_css %}
     """
-    rendered_urls = [render_link_tag(bootstrap_css_url()), ]
+    rendered_urls = [render_link_tag(bootstrap_css_url(), attrs={'integrity': css_url_integrity(), 'crossorigin':"anonymous"}), ]
     if bootstrap_theme_url():
         rendered_urls.append(render_link_tag(bootstrap_theme_url()))
     return mark_safe(''.join([url for url in rendered_urls]))
@@ -233,10 +233,10 @@ def bootstrap_javascript(jquery=None):
     if jquery:
         url = bootstrap_jquery_url()
         if url:
-            javascript += render_tag('script', attrs={'src': url})
+            javascript += render_tag('script', attrs={'src': url, 'integrity': jquery_integrity(), 'crossorigin':"anonymous"})
     url = bootstrap_javascript_url()
     if url:
-        attrs = {'src': url}
+        attrs = {'src': url, 'integrity': javascript_url_integrity(), 'crossorigin':"anonymous"}
         javascript += render_tag('script', attrs=attrs)
     return mark_safe(javascript)
 
@@ -286,7 +286,7 @@ def bootstrap_formset_errors(*args, **kwargs):
             The formset that is being rendered
 
         layout
-            Context value that is available in the template ``bootstrap3/form_errors.html`` as ``layout``.
+            Context value that is available in the template ``bootstrap4/form_errors.html`` as ``layout``.
 
     **Usage**::
 
@@ -356,7 +356,7 @@ def bootstrap_form_errors(*args, **kwargs):
             :default: ``'all'``
 
         layout
-            Context value that is available in the template ``bootstrap3/form_errors.html`` as ``layout``.
+            Context value that is available in the template ``bootstrap4/form_errors.html`` as ``layout``.
 
     **Usage**::
 
@@ -749,7 +749,7 @@ def bootstrap_messages(context, *args, **kwargs):
     we have to set the jquery parameter too when using the
     bootstrap_javascript tag.
 
-    Uses the template ``bootstrap3/messages.html``.
+    Uses the template ``bootstrap4/messages.html``.
 
     **Tag name**::
 
@@ -775,10 +775,10 @@ def bootstrap_messages(context, *args, **kwargs):
     if Context and isinstance(context, Context):
         context = context.flatten()
     context.update({'message_constants': message_constants})
-    return render_template_file('bootstrap3/messages.html', context=context)
+    return render_template_file('bootstrap4/messages.html', context=context)
 
 
-@register.inclusion_tag('bootstrap3/pagination.html')
+@register.inclusion_tag('bootstrap4/pagination.html')
 def bootstrap_pagination(page, **kwargs):
     """
     Render pagination for a page

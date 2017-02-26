@@ -2,16 +2,18 @@
 Authors
 =======
 
-This application is developed and maintained by `Zostera <https://zostera.nl>`_.
+This application whas fork from <https://github.com/dyve/django-bootstrap3> witch was developed by `Zostera <https://zostera.nl>`_.
+
+Bootstrap4 branch by Kent Medin
 
 Development Lead
 ----------------
 
-* Dylan Verheul <dylan@dyve.net>
+* Kent Medin <bitkit@gmail.com>
 
 Contributors
 ------------
-
+* Dylan Verheul <dylan@dyve.net>
 * Allard Stijnman <a.g.stijnman@gmail.com>
 * Austin Whittier <austin.whitt@gmail.com>
 * Caio Ariede <caio.ariede@gmail.com>

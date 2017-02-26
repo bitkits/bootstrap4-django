@@ -128,7 +128,7 @@ class FormsetRenderer(BaseRenderer):
         formset_errors = self.get_formset_errors()
         if formset_errors:
             return render_template_file(
-                'bootstrap3/form_errors.html',
+                'bootstrap4/form_errors.html',
                 context={
                     'errors': formset_errors,
                     'form': self.formset,
@@ -207,7 +207,7 @@ class FormRenderer(BaseRenderer):
 
         if form_errors:
             return render_template_file(
-                'bootstrap3/form_errors.html',
+                'bootstrap4/form_errors.html',
                 context={
                     'errors': form_errors,
                     'form': self.form,
@@ -264,7 +264,7 @@ class FieldRenderer(BaseRenderer):
         self.addon_after_class = kwargs.get('addon_after_class',
                                             self.widget.attrs.pop('addon_after_class', 'input-group-addon'))
 
-        # These are set in Django or in the global BOOTSTRAP3 settings, and
+        # These are set in Django or in the global BOOTSTRAP4 settings, and
         # they can be overwritten in the template
         error_css_class = kwargs.get('error_css_class', None)
         required_css_class = kwargs.get('required_css_class', None)
@@ -393,7 +393,7 @@ class FieldRenderer(BaseRenderer):
         div2 = '</div>'
         html = html.replace('<select', div1 + '<select')
         html = html.replace('</select>', '</select>' + div2)
-        return '<div class="row bootstrap3-multi-input">' + html + '</div>'
+        return '<div class="row bootstrap4-multi-input">' + html + '</div>'
 
     def fix_clearable_file_input(self, html):
         """
@@ -411,7 +411,7 @@ class FieldRenderer(BaseRenderer):
 
         """
         # TODO This needs improvement
-        return '<div class="row bootstrap3-multi-input"><div class="col-xs-12">{html}</div></div>'.format(
+        return '<div class="row bootstrap4-multi-input"><div class="col-xs-12">{html}</div></div>'.format(
             html=html
         )
 
@@ -455,7 +455,7 @@ class FieldRenderer(BaseRenderer):
         help_text_and_errors += self.field_errors
         if help_text_and_errors:
             help_html = render_template_file(
-                'bootstrap3/field_help_text_and_errors.html',
+                'bootstrap4/field_help_text_and_errors.html',
                 context={
                     'field': self.field,
                     'help_text_and_errors': help_text_and_errors,
