@@ -7,7 +7,8 @@ import sys
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Include BOOTSTRAP3_FOLDER in path
-BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..', 'bootstrap4'))
+BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..'))
+print(BOOTSTRAP4_FOLDER)
 if BOOTSTRAP4_FOLDER not in sys.path:
     sys.path.insert(0, BOOTSTRAP4_FOLDER)
 
@@ -116,9 +117,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'bootstrap4',
     'demo',
+    'bootstrap4',
 )
 
 # A sample logging configuration. The only tangible logging

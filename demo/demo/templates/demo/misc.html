@@ -1,6 +1,6 @@
 {% extends 'demo/base.html' %}
 
-{% load bootstrap4 %}
+{% load bootstrap_tags %}
 
 {% block title %}
     Miscellaneous
@@ -8,7 +8,7 @@
 
 {% block content %}
 
-    {% bootstrap_button 'button' size='lg' %}
+    {% bootstrap_button 'button' size='lg' button_type='button' %}
 
     {% bootstrap_button 'button' size='lg' icon='info-sign' %}
 

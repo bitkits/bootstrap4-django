@@ -519,7 +519,7 @@ class FieldRenderer(BaseRenderer):
         if self.layout == 'horizontal':
             form_group_class = add_css_class(
                 form_group_class,
-                self.get_size_class(prefix='form-group')
+                self.get_size_class(prefix='form-group'),' row'
             )
         return form_group_class
 

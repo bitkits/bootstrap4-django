@@ -607,38 +607,6 @@ def bootstrap_button(*args, **kwargs):
 
 
 @register.simple_tag
-def bootstrap_icon(icon, **kwargs):
-    """
-    Render an icon
-
-    **Tag name**::
-
-        bootstrap_icon
-
-    **Parameters**:
-
-        icon
-            Icon name. See the `Bootstrap docs <http://getbootstrap.com/components/#glyphicons>`_ for all icons.
-
-        extra_classes
-            Extra CSS classes to add to the icon HTML
-
-        title
-            A title for the icon (HTML title attrivute)
-
-    **Usage**::
-
-        {% bootstrap_icon icon %}
-
-    **Example**::
-
-        {% bootstrap_icon "star" %}
-
-    """
-    return render_icon(icon, **kwargs)
-
-
-@register.simple_tag
 def bootstrap_alert(content, alert_type='info', dismissable=True):
     """
     Render an alert

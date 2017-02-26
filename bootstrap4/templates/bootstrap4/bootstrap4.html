@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-{% load bootstrap4 %}
+{% load bootstrap_tags %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>{% block bootstrap4_title %}django-bootstrap4 template title{% endblock %}</title>
     {% bootstrap_css %}
+    <title>{% block bootstrap4_title %}django-bootstrap4 template title{% endblock %}</title>
 </head>
 
 <body>
 {% block bootstrap4_content %}django-bootstrap4 template content{% endblock %}
 {% bootstrap_javascript jquery=True %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 {% block bootstrap4_extra_script %}{% endblock %}
 </body>
 
