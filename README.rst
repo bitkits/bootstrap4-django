@@ -2,7 +2,7 @@
 Bootstrap 4 for Django
 ======================
 
-Write Django as usual, and let ``django-bootstrap4`` make template output into Bootstrap 4 code.
+Write Django as usual, and let ``bootstrap4-django`` make template output into Bootstrap 4 code.
 
 
 .. image:: https://img.shields.io/pypi/dm/django-bootstrap4.svg
@@ -21,7 +21,7 @@ Installation
 
 1. Install using pip:
 
-   ``pip install django-bootstrap4``
+   ``pip install bootstrap4-django``
 
    Alternatively, you can install download or clone this repo and call ``pip install -e .``.
 

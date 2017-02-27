@@ -2,7 +2,7 @@
 Settings
 ========
 
-The django-bootstrap4 has some pre-configured settings.
+The bootstrap4-django4 has some pre-configured settings.
 
 They can be modified by adding a dict variable called ``BOOTSTRAP4`` in your ``settings.py`` and customizing the values ​​you want;
 

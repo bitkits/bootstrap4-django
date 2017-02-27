@@ -2,7 +2,7 @@
 Templates
 =========
 
-You can customize the output of ``django-bootstrap4`` by writing your own templates. These templates are available:
+You can customize the output of ``bootstrap4-django`` by writing your own templates. These templates are available:
 
 
 bootstrap4/field_help_text_and_errors.html

@@ -34,13 +34,13 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 setup(
-    name='django-bootstrap4',
+    name='bootstrap4-django',
     version=version,
     description="""Bootstrap 4 support for Django projects""",
     long_description=readme + '\n\n' + history,
     author='Kent Medin',
     author_email='bitkit@gmail.com',
-    url='https://github.com/bitkits/django-bootstrap4',
+    url='https://github.com/bitkits/bootstrap4-django',
     packages=[
         'bootstrap4',
     ],
@@ -49,7 +49,7 @@ setup(
     ],
     license="Apache License 2.0",
     zip_safe=False,
-    keywords='django-bootstrap4',
+    keywords='bootstrap4-django',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
